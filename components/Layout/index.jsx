@@ -1,11 +1,14 @@
 import Menu from '../Menu';
+import Hero from '../Hero';
+
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Menu>
-        <Menu.Brand>Somasys</Menu.Brand>
-      </Menu>
+      <Menu />
+      <Hero/>
+    
+
 
       {/* <Navbar /> */}
       {/* <main>{children}</main> */}
