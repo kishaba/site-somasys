@@ -1,9 +1,29 @@
+import { useState, useEffect } from 'react';
 const Menu = ({ children }) => {
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 550) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbarColor);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  const handleScroll = () => {
+    console.log('scroll event', window.scrollY);
+  };
   return (
-    <header className='text-gray-600 body-font bg-green text-white bg-gradient-to-r from-blue to-green  '>
-      <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
-        <MenuBrand>Somasys</MenuBrand>
-        <MenuNav></MenuNav>
+    <header className='w-full fixed text-white body-font'>
+      <div className={colorChange ? 'bg-gradient-to-b from-blue border-none bg-opacity-75' : 'bg-gradient-to-b from-blue border-none bg-opacity-0'}>
+        {/* bg-gradient-to-r from-white to-green overflow-y-visible */}
+        <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center  '>
+          <MenuBrand>Somasys</MenuBrand>
+          <MenuNav></MenuNav>
+        </div>
       </div>
     </header>
   );
@@ -12,18 +32,7 @@ const Menu = ({ children }) => {
 const MenuBrand = ({ children }) => {
   return (
     <a className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 '>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        fill='none'
-        stroke='currentColor'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        strokeWidth={2}
-        className='w-10 h-10 text-white p-2 bg-blue rounded-full'
-        viewBox='0 0 24 24'
-      >
-        <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' />
-      </svg>
+      <img className='object-cover object-center rounded h-12' alt='logo' src='s.png' />
       <span className='ml-3 text-xl text-white hover:text-green hover:cursor-pointer hover:animate-pulse '>
         {children}
       </span>
@@ -43,7 +52,7 @@ const MenuNav = ({ children }) => {
 };
 const MenuItem = ({ children }) => {
   return (
-    <a className='mr-5 transform hover:scale-110 motion-reduce:transform-none hover:text-blue hover:cursor-pointer'>
+    <a className='mr-5 transform hover:scale-110 motion-reduce:transform-none hover:text-green hover:cursor-pointer'>
       {children}
     </a>
   );
