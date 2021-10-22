@@ -1,7 +1,8 @@
 const Hero = () => {
     return (
-        <div className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center bg-gradient-to-r from-green to-blue h-screen flex-1 overflow-y-auto p-5'>
-            <section className='text-gray-600 body-font'>
+        <div className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center
+        bg-gradient-to-r from-green to-blue h-screen flex-1 overflow-y-auto p-5'>
+            <div className='text-gray-600 body-font'>
                 <div className=' container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
                     <div className=' lg:max-w-lg lg:w-full md:w-1/2 w-5/6'>
                         <img
@@ -11,7 +12,7 @@ const Hero = () => {
                         />
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 }
