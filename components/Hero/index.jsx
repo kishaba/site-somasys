@@ -8,7 +8,7 @@ const Hero = () => {
                         <img
                             className='object-cover object-center rounded'
                             alt='hero'
-                            src='http://www.somasys.com.br/wp-content/uploads/2017/12/logo-branco-assessoria.png'
+                            src='logo-branco-assessoria.png'
                         />
                     </div>
                 </div>
