@@ -1,27 +1,58 @@
 const Services = () => {
   return (
-    <div className='text-gray-600 body-font bg-gradient-to-r from-green to-blue'>
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Serviços
-          </h1>
-          <p className="mb-8 leading-relaxed text-white">
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-            plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk
-            tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard
-            chambray.
-          </p>
+    <div className="text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma">
+      <div className="container px-5 py-24 mx-auto flex flex-wrap ">
+
+        <div className="container flex flex-wrap lg:py-6 px-5 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+
+          <div className="flex flex-col mb-10 lg:items-start items-center">
+            <div className="flex-grow">
+              <h2 className="text-gray-900 text-4xl title-font font-medium mb-3">
+                Gestão empresarial
+              </h2>
+              <p className="leading-relaxed text-base text-white">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col mb-10 lg:items-start items-center">
+            <div className="flex-grow">
+              <h2 className="text-gray-900 text-4xl title-font font-medium mb-3">
+                Soluções Comerciais
+              </h2>
+              <p className="leading-relaxed text-base text-white">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col mb-10 lg:items-start items-center">
+            <div className="flex-grow">
+              <h2 className="text-gray-900 text-4xl title-font font-medium mb-3">
+                Serviços Oferecidos
+              </h2>
+              <p className="leading-relaxed text-base text-white">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine.
+              </p>
+            </div>
+          </div>
+
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+
+        <div className="lg:max-w-lg mx-auto lg:w-full md:w-1/2 rounded-lg overflow-hidden">
           <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="https://dummyimage.com/720x600"
+            className="object-contain object-center"
+            alt="feature"
+            src="ideia.png"
           />
         </div>
       </div>
     </div>
+
   )
 }
 

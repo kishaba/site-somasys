@@ -17,66 +17,61 @@ const Clients = () => {
                         <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/500x300"
+                                className="w-full  object-contain h-full object-center block"
+                                src="logo2.png"
                             />
                         </div>
                         <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/501x301"
+                                className="w-full object-contain h-full object-center block"
+                                src="logo3.png"
                             />
                         </div>
                         <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/501x301"
+                                className="w-full object-contain h-full object-center block"
+                                src="logo4.png"
                             />
                         </div>
                         <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/501x301"
-                            />
-                        </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img
-                                alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/503x303"
-                            />
-                        </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img
-                                alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/503x303"
+                                className="w-full object-contain h-full object-center block"
+                                src="logo5.png"
                             />
                         </div>
                     </div>
                     <div className="flex flex-wrap w-1/2">
-                        <div className="md:p-2 p-1 w-full">
+                        <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full h-full object-cover object-center block"
-                                src="https://dummyimage.com/601x361"
+                                className="w-full h-full object-contain object-center block"
+                                src="logo5.png"
+                            />
+                        </div>
+
+                        <div className="md:p-2 p-1 w-1/2">
+                            <img
+                                alt="gallery"
+                                className="w-full h-full object-contain object-center block"
+                                src="logo4.png"
+                            />
+                        </div>
+                        
+                        <div className="md:p-2 p-1 w-1/2">
+                            <img
+                                alt="gallery"
+                                className="w-full object-contain h-full object-center block"
+                                src="logo3.png"
                             />
                         </div>
                         <div className="md:p-2 p-1 w-1/2">
                             <img
                                 alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/502x302"
-                            />
-                        </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img
-                                alt="gallery"
-                                className="w-full object-cover h-full object-center block"
-                                src="https://dummyimage.com/503x303"
+                                className="w-full object-contain h-full object-center block"
+                                src="logo2.png"
                             />
                         </div>
                     </div>

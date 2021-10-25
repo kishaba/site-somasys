@@ -5,8 +5,9 @@ import Clients from '../Clients';
 import Footer from '../Footer';
 import Services from '../Services';
 import Contact from '../Contact';
+import Numbers from '../Numbers';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <Menu />
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
       <Services />
       <Clients />
       <Contact />
+      <Numbers />
       <Footer />
     </>
   )
