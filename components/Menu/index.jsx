@@ -1,5 +1,7 @@
-import React, { forwardRef, useRef } from 'react'
+import React, { useRef } from 'react'
 import About from '../About';
+
+console.log(About)
 
 const Menu = () => {
   return (
@@ -23,46 +25,35 @@ const MenuBrand = () => {
 
 const MenuNav = () => {
   return (
-    <div>
-      <div className='hidden md:block md:ml-auto items-center text-xl'>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>Sobre</MenuItem>
-        <MenuItem>Blog</MenuItem>
-        <MenuItem>Serviços</MenuItem>
-        <MenuItem>Parceiros</MenuItem>
-        <MenuItem>Contato</MenuItem>
-      </div>
+
+    <div className='hidden md:block md:ml-auto items-center text-xl'>
+      <MenuItem>Home</MenuItem>
+      <MenuItem>Sobre</MenuItem>
+      <MenuItem>Blog</MenuItem>
+      <MenuItem>Serviços</MenuItem>
+      <MenuItem>Parceiros</MenuItem>
+      <MenuItem>Contato</MenuItem>
     </div>
+
   );
 };
 
-
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const MenuItem = ({ children }) => {
-  const executeScroll = () => scrollToRef(myRef)
+  const myRef = useRef(null)
+  // const executeScroll = () => scrollToRef(myRef)
 
-
-  // const handleClick = (path) => {
-  //   if (path === "/Home") {
-  //     console.log("Home Page");
-  //   }
-  //   if (path === "/Sobre") {
-
-  //   }
-  //   console.log(path);
-  // };
+  const executeScroll = () => {
+    console.log('clicou')
+    window.scrollTo(0, myRef.current.offsetTop)    
+  }
 
   return (
-    // <Link href="/">
     <a className='mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'
-      onClick={executeScroll}
-      ref={forwardRef}
-    // onClick={(e) => handleClick(`/${children}`)}
-    >
+      onClick={executeScroll}>
       {children}
     </a>
-    // </Link>
   );
 };
 

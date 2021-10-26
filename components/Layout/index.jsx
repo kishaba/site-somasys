@@ -7,12 +7,16 @@ import Services from '../Services';
 import Contact from '../Contact';
 import Numbers from '../Numbers';
 
-const Layout = () => {
+import Link from 'next/link'
+
+const Layout = ({ children }) => {
   return (
     <>
       <Menu />
       <Hero />
-      <About />
+      <Link href="/about" passHref>
+        <About />
+      </Link>
       <Services />
       <Clients />
       <Contact />
