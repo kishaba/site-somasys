@@ -1,8 +1,3 @@
-import React, { useRef } from 'react'
-import About from '../About';
-
-console.log(About)
-
 const Menu = () => {
   return (
     <div className='fixed text-white bg-gradient-to-b from-blue-soma
@@ -25,7 +20,6 @@ const MenuBrand = () => {
 
 const MenuNav = () => {
   return (
-
     <div className='hidden md:block md:ml-auto items-center text-xl'>
       <MenuItem>Home</MenuItem>
       <MenuItem>Sobre</MenuItem>
@@ -34,24 +28,14 @@ const MenuNav = () => {
       <MenuItem>Parceiros</MenuItem>
       <MenuItem>Contato</MenuItem>
     </div>
-
   );
 };
 
 // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const MenuItem = ({ children }) => {
-  const myRef = useRef(null)
-  // const executeScroll = () => scrollToRef(myRef)
-
-  const executeScroll = () => {
-    console.log('clicou')
-    window.scrollTo(0, myRef.current.offsetTop)    
-  }
-
   return (
-    <a className='mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'
-      onClick={executeScroll}>
+    <a className='mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'>
       {children}
     </a>
   );

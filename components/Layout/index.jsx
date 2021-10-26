@@ -7,14 +7,12 @@ import Services from '../Services';
 import Contact from '../Contact';
 import Numbers from '../Numbers';
 
-import React, { useRef } from 'react'
+import React from 'react'
+import { Link } from "react-scroll";
 
-import Link from 'next/link'
-
-
-const Menu2 = ({ children }) => {
+const Menu2 = () => {
   return (
-    <div>
+    <>
       <div className='fixed text-white bg-gradient-to-b from-blue-soma
     z-50 w-full px-5 py-2 flex justify-between items-center'>
         <div className='container mx-auto flex flex-wrap p-5 items-center md:flex-row'>
@@ -23,20 +21,33 @@ const Menu2 = ({ children }) => {
         </div>
       </div>
 
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
+
       <div id="about">
         <About />
       </div>
-      <Services />
-      <Clients />
-      <Contact />
+
+      <div id="services">
+        <Services />
+      </div>
+
+      <div id="clients">
+        <Clients />
+      </div>
+
+      <div id="contact">
+        <Contact />
+      </div>
+
       <Numbers />
       <Footer />
-    </div>
+    </>
   );
 };
 
-const MenuBrand = ({ children }) => {
+const MenuBrand = () => {
   return (
     <a className='flex-1'>
       <img className='object-cover object-center h-14' alt='logo' src='logo.png' />
@@ -45,32 +56,37 @@ const MenuBrand = ({ children }) => {
 };
 
 const MenuNav = () => {
-  // const executeScroll = () => {
-  //   console.log('clicou')
-  //   window.scrollTo(0, myRef.current.offsetTop)
-  // }
-
   return (
 
     <div className='hidden md:block md:ml-auto items-center text-xl'>
-      <MenuItem>Home</MenuItem>
 
-      <Link href="#about">
-        <a 
-          className='mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'>
-          Sobre
-        </a>
+      <Link to="home" smooth={true}>
+        <MenuItem>Home</MenuItem>
       </Link>
 
-      {/* <MenuItem>Sobre</MenuItem> */}
-      <MenuItem>Blog</MenuItem>
-      <MenuItem>Serviços</MenuItem>
-      <MenuItem>Parceiros</MenuItem>
-      <MenuItem>Contato</MenuItem>
-    </div>
+      <Link to="about" smooth={true}>
+        <MenuItem>Sobre</MenuItem>
+      </Link>
 
-  );
-};
+      <Link to="services" smooth={true}>
+        <MenuItem>Serviços</MenuItem>
+      </Link>
+
+      <Link to="clients" smooth={true}>
+        <MenuItem>Clientes</MenuItem>
+      </Link>
+
+      <Link to="contact" smooth={true}>
+        <MenuItem>Contato</MenuItem>
+      </Link>
+
+      <Link to="blog" smooth={true}>
+        <MenuItem>Blog</MenuItem>
+      </Link>
+
+    </div>
+  )
+}
 
 const MenuItem = ({ children }) => {
   return (
@@ -79,8 +95,6 @@ const MenuItem = ({ children }) => {
     </a>
   )
 }
-
-
 
 Menu2.Brand = MenuBrand;
 Menu2.Nav = MenuNav;

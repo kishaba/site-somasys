@@ -14,7 +14,7 @@ const Services = () => {
                   Gestão empresarial
                 </h2>
                 <p className="leading-relaxed text-base text-white">
-                  <ul class="list-none">
+                  <ul className="list-none">
                     <li>Assessoria de Fluxo de TI.</li>
                     <li>Inteligência do negócio.</li>
                     <li>Agilidade no Processo de Tomada de Decisão.</li>
@@ -35,7 +35,7 @@ const Services = () => {
                   Soluções Comerciais
                 </h2>
                 <p className="leading-relaxed text-base text-white">
-                  <ul class="list-none">
+                  <ul className="list-none">
                     <li>Assessoria de Fluxo de TI.</li>
                     <li>Inteligência do negócio.</li>
                     <li>Agilidade no Processo de Tomada de Decisão.</li>
@@ -56,7 +56,7 @@ const Services = () => {
                   Serviços Oferecidos
                 </h2>
                 <p className="leading-relaxed text-base text-white">
-                  <ul class="list-none">
+                  <ul className="list-none">
                     <li>Assessoria de Fluxo de TI.</li>
                     <li>Inteligência do negócio.</li>
                     <li>Agilidade no Processo de Tomada de Decisão.</li>
