@@ -1,13 +1,7 @@
-// import UserContext from '../components/context'
-// import { useContext } from 'react';
-
-import { forwardRef, useRef } from "react";
-
-const About = forwardRef((props, ref) => {
-
+const About = () => {
     return (
-        <div ref={ref} className="text-gray-600 body-font">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="text-gray-600 body-font">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center h-screen">
 
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 pb-10 rounded-lg overflow-hidden">
                     <img
@@ -38,6 +32,6 @@ const About = forwardRef((props, ref) => {
             </div>
         </div>
     )
-})
+}
 
 export default About;
