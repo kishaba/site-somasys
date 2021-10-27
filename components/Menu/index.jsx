@@ -34,7 +34,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className='fixed w-full'>
+      <div className='fixed w-full z-50'>
         <div className={colorChange ? 'text-green-soma' : 'text-white'}>
           <div className={navbar ? 'bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl' : ''}>
             <div className='container mx-auto flex p-5 items-center md:flex-row px-5 py-5'>

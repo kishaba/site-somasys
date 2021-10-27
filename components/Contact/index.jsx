@@ -10,7 +10,7 @@ const Contact = () => {
                     marginWidth={0}
                     title="map"
                     scrolling="no"
-                    src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14055.252430426981!2d-52.3960826!3d-28.2736833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7db4fab0fa483c4!2ssomasys!5e0!3m2!1spt-BR!2sbr!4v1635346196435!5m2!1spt-BR!2sbr"
                     style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
                 />
             </div>
