@@ -7,17 +7,50 @@ import Services from '../Services';
 import Contact from '../Contact';
 import Numbers from '../Numbers';
 
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-scroll";
 
-const Menu2 = () => {
+const Layout = () => {
+
+  const [navbar, setNavbar] = useState(false)
+  const changeNavbar = () => {
+    if (window.scrollY >= 66) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+  useEffect(() => {
+    changeNavbar()
+
+    window.addEventListener("scroll", changeNavbar)
+  })
+
+
+  const [colorChange, setColorchange] = useState(false)
+  const changeBackground = () => {
+    if (window.scrollY >= 600) {
+      setColorchange(true)
+    } else {
+      setColorchange(false)
+    }
+  }
+  useEffect(() => {
+    changeBackground()
+
+    window.addEventListener("scroll", changeBackground)
+  })
+
   return (
     <>
-      <div className='fixed text-white bg-gradient-to-b from-blue-soma
-    z-50 w-full px-5 py-2 flex justify-between items-center'>
-        <div className='container mx-auto flex flex-wrap p-5 items-center md:flex-row'>
-          <MenuBrand></MenuBrand>
-          <MenuNav></MenuNav>
+      <div className='fixed w-full'>
+        <div className={colorChange ? 'text-green-soma' : 'text-white'}>
+          <div className={navbar ? 'bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl' : ''}>
+            <div className='container mx-auto flex p-5 items-center md:flex-row px-5 py-5'>
+              <MenuBrand></MenuBrand>
+              <MenuNav></MenuNav>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -49,9 +82,9 @@ const Menu2 = () => {
 
 const MenuBrand = () => {
   return (
-    <a className='flex-1'>
-      <img className='object-cover object-center h-14' alt='logo' src='logo.png' />
-    </a>
+    <div className='flex-1'>
+      <img className='object-contain h-14 hidden md:block' alt='logo' src='logo.png' />
+    </div>
   );
 };
 
@@ -85,19 +118,33 @@ const MenuNav = () => {
       </Link>
 
     </div>
-  )
-}
+
+  );
+};
 
 const MenuItem = ({ children }) => {
+  const [colorChange, setColorchange] = useState(false)
+  const changeBackground = () => {
+    if (window.scrollY >= 600) {
+      setColorchange(true)
+    } else {
+      setColorchange(false)
+    }
+  }
+  useEffect(() => {
+    changeBackground()
+
+    window.addEventListener("scroll", changeBackground)
+  })
   return (
-    <a className='mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'>
+    <a className={
+      colorChange ?
+        'mr-5 hover:scale-110 hover:text-white hover:cursor-pointer'
+        : 'mr-5 hover:scale-110 hover:text-green-soma hover:cursor-pointer'
+    }>
       {children}
     </a>
-  )
-}
+  );
+};
 
-Menu2.Brand = MenuBrand;
-Menu2.Nav = MenuNav;
-Menu2.item = MenuItem;
-
-export default Menu2;
+export default Layout;

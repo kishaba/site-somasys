@@ -1,7 +1,6 @@
 const Services = () => {
   return (
-
-    <div className="text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma">
+    <div className="text-gray-600 body-font bg-white-blue-soma h-screen">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 
         <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
@@ -74,8 +73,6 @@ const Services = () => {
       </div>
 
     </div>
-
-
   )
 }
 

@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         'green-soma': '#165C65',
         'blue-soma': '#29B0BC',
+        'white-blue-soma': '#6DB1B9',
       },
     },
   },
