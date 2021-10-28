@@ -4,9 +4,9 @@ import { SocialIcon } from 'react-social-icons';
 const Footer = () => {
   return (
     <div className="text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma">
-      <div className="px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div className="px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 
-        <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center">
+        <div className="flex-grow flex flex-wrap md:px-20 -mb-10 md:text-left text-center">
 
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <div className='mx-auto flex px-5 md:flex-row flex-col items-center'>
