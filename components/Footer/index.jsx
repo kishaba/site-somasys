@@ -1,10 +1,10 @@
-import { SocialIcon } from 'react-social-icons';
+import { FiLinkedin, FiInstagram, FiFacebook } from 'react-icons/fi';
 
 const Footer = () => {
   return (
     <div className='text-gray-600 py-3 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
       <div className='px-5 pt-6 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col '>
-        <div className='flex-grow flex flex-wrap mb-10 '>
+        <div className='flex-grow flex flex-wrap mb-10 justify-center '>
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
             <div className='mx-auto flex px-5 md:flex-row flex-col items-center'>
               <div className=' lg:max-w-lg lg:w-full md:w-1/2 w-5/6 pb-3'>
@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center '>
+          {/* <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center '>
             <h2 className='title-font font-medium text-white tracking-widest text-lg mb-3'>MENU</h2>
             <nav className='list-none mb-10'>
               <li>
@@ -39,7 +39,7 @@ const Footer = () => {
                 <a className='cursor-pointer text-white hover:text-gray-800'>Contato</a>
               </li>
             </nav>
-          </div>
+          </div> */}
           <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center'>
             <h2 className='title-font font-medium text-white tracking-widest text-lg mb-3'>
               ENDEREÇO
@@ -69,20 +69,28 @@ const Footer = () => {
             <h2 className='title-font text-center font-medium text-white tracking-widest text-lg '>
               REDES SOCIAIS:
             </h2>
-            <div className='flex space-x-4  py-6 flex flex-wrap content-center'>
-              <SocialIcon
-                network='linkedin'
-                fgColor='#fff'
-                url='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
-              />
-              <SocialIcon
-                network='instagram'
-                fgColor='#fff'
-                className='social-icons-style-border sqs-svg-icon--wrapper sqs-use--icon '
-                url='https://www.instagram.com/somasys_sistemas/'
-              />
-              <SocialIcon network='facebook' fgColor='#fff'url='https://www.facebook.com/somasysPF/' />
-              
+            <div className='ml-6 flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-6xl inline-block '>
+              <a className='hover:text-green-soma'
+                href='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
+                target='_blank'
+                title='LinkedIn Profile'
+              >
+                <FiLinkedin/>
+              </a>
+              <a className='hover:text-green-soma'
+                href='https://www.instagram.com/somasys_sistemas/'
+                target='_blank'
+                title='LinkedIn Profile'
+              >
+                <FiInstagram/>
+              </a>
+              <a className='hover:text-green-soma'
+                href='https://www.facebook.com/somasysPF/'
+                target='_blank'
+                title='LinkedIn Profile'
+              >
+                <FiFacebook/>
+              </a>
             </div>
           </div>
         </div>
@@ -91,10 +99,9 @@ const Footer = () => {
       <div className='text-gray-600 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
         <div className='px-5 mx-auto text-center'>
           <p className='text-lg text-white'>Uma empresa que você pode confiar!</p>
-          <p className='text-sm text-white'>© 2021 Somasys</p>
+          <p className='text-sm text-white'>© {new Date().getFullYear()} Somasys</p>
         </div>
       </div>
-      
     </div>
   );
 };

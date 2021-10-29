@@ -35,7 +35,7 @@ const Menu = () => {
   return (
     <>
       <div className='fixed w-full z-50'>
-        <div className={colorChange ? 'text-green-soma' : 'text-white'}>
+        <div className={colorChange ? 'text-white' : 'text-white'}>
           <div className={navbar ? 'bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl' : ''}>
             <div className='container px-5 py-3 mx-auto flex p-5 items-center md:flex-row'>
               <MenuBrand></MenuBrand>
@@ -107,8 +107,8 @@ const MenuItem = ({ children }) => {
   return (
     <a className={
       colorChange ?
-        'hover:scale-110 hover:text-white hover:cursor-pointer'
-        : 'hover:scale-110 hover:text-green-soma hover:cursor-pointer'
+        'hover:scale-110 hover:text-blue-soma hover:cursor-pointer'
+        : 'hover:scale-110 hover:text-blue-soma hover:cursor-pointer'
     }>
       {children}
     </a>
