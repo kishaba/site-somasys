@@ -74,7 +74,7 @@ const MenuNav = () => {
       </Link>
 
       <Link to="clients" smooth={true}>
-        <MenuItem>Clientes</MenuItem>
+        <MenuItem>Parceiros</MenuItem>
       </Link>
 
       <Link to="contact" smooth={true}>

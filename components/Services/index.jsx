@@ -4,8 +4,8 @@ const Services = () => {
   let gestao = {
     title: "Gestão empresarial",
     image: {
-      src:'gestao.jpg',
-      alt:'Gestão Empresarial'
+      src: 'gestao.jpg',
+      alt: 'Gestão Empresarial'
     },
     style: {
       background: "url('gestao_espelhada.jpg')",
@@ -23,8 +23,8 @@ const Services = () => {
   let solucoes = {
     title: "Soluções Comerciais",
     image: {
-      src:'solucao.jpg',
-      alt:'Soluções Comerciais'
+      src: 'solucao.jpg',
+      alt: 'Soluções Comerciais'
     },
     style: {
       background: "url('solucao_espelhada.jpg')",
@@ -42,8 +42,8 @@ const Services = () => {
   let servicos = {
     title: "Serviços Oferecidos",
     image: {
-      src:'servico.jpg',
-      alt:'Serviços Oferecidos'
+      src: 'servico.jpg',
+      alt: 'Serviços Oferecidos'
     },
     style: {
       background: "url('servico_espelhada.jpg')",

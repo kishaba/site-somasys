@@ -2,7 +2,7 @@ import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
   return (
-    <div className='text-gray-600 py-3 body-font bg-gradient-to-r from-green-soma to-blue-soma '>
+    <div className='text-gray-600 py-3 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
       <div className='px-5 pt-6 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col '>
         <div className='flex-grow flex flex-wrap mb-10 '>
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma'>
+      <div className='text-gray-600 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
         <div className='px-5 mx-auto text-center'>
           <p className='text-lg text-white'>Uma empresa que você pode confiar!</p>
           <p className='text-sm text-white'>© 2021 Somasys</p>

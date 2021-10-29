@@ -28,11 +28,13 @@ const Layout = () => {
         <Clients />
       </div>
 
+      <Numbers />
+
       <div id="contact">
         <Contact />
       </div>
 
-      <Numbers />
+      
       <Footer />
     </>
   );
