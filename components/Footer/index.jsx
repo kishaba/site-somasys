@@ -69,7 +69,7 @@ const Footer = () => {
             <h2 className='title-font text-center font-medium text-white tracking-widest text-lg '>
               REDES SOCIAIS:
             </h2>
-            <div className='ml-6 flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-6xl inline-block '>
+            <div className=' flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-4xl inline-block '>
               <a className='hover:text-green-soma'
                 href='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
                 target='_blank'
