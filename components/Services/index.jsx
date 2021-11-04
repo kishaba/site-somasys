@@ -61,8 +61,6 @@ const Services = () => {
 
   return (
     <div className='text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma items-center'>
-
-
       <div className="container px-5 pt-24 mx-auto text-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
           ALGUNS DE NOSSOS SERVIÇOS
@@ -77,13 +75,9 @@ const Services = () => {
 
 
       <div className='container px-5 py-8 mx-auto flex md:items-center md:flex-row flex-col'>
-
-
         <Card>{gestao}</Card>
         <Card>{solucoes}</Card>
         <Card>{servicos}</Card>
-
-
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 const Card = ({ children }) => {
-    // console.log(children.lista)
     return (
-        <div className='flex-grow flex flex-wrap md:text-left text-center '>
-            <div className='flip-card mb-8 bg-transparent mx-auto overflow-hidden bg-white rounded-lg dark:bg-gray-800'>
-                <div className='flip-card-inner w-full h-full text-center'>
+        <div className='flex-grow flex md:text-left text-center '>
+            <div className='flip-card mb-8 mx-auto overflow-hidden rounded-lg'>
+                <div className='flip-card-inner h-full text-center'>
                     <div className='flip-card-front bg-card-front absolute w-full h-full'>
                         <img className='object-cover'
                             src={children.image.src}

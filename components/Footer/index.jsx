@@ -17,82 +17,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center '>
-            <h2 className='title-font font-medium text-white tracking-widest text-lg mb-3'>MENU</h2>
-            <nav className='list-none mb-10'>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Home</a>
-              </li>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Sobre</a>
-              </li>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Blog</a>
-              </li>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Serviços</a>
-              </li>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Parceiros</a>
-              </li>
-              <li>
-                <a className='cursor-pointer text-white hover:text-gray-800'>Contato</a>
-              </li>
-            </nav>
-          </div> */}
-          <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center'>
-            <h2 className='title-font font-medium text-white tracking-widest text-lg mb-3'>
-              ENDEREÇO
-            </h2>
-            <nav className='list-none mb-10'>
-              <li>
-                <a className='text-white'>Rua Alfredo Chaves, 568</a>
-              </li>
-              <li>
-                <a className='text-white'>Bairro Lucas Araújo - Passo Fundo/RS</a>
-              </li>
-              <li>
-                <a className='text-white'>54 3311.1388 - Comercial</a>
-              </li>
-              <li>
-                <a className='text-white'>54 9 9940.1388 - Administrativo</a>
-              </li>
-              <li>
-                <a className='text-white'>comercial@somasys.com.br</a>
-              </li>
-            </nav>
-          </div>
-          <div className='lg:w-1/4 md:w-1/2 w-full flex flex-col items-center'>
-            <h2 className='title-font text-center font-medium text-white tracking-widest text-lg mb-3'>
-              SIGA-NOS EM NOSSAS
-            </h2>
-            <h2 className='title-font text-center font-medium text-white tracking-widest text-lg '>
-              REDES SOCIAIS:
-            </h2>
-            <div className='ml-6 flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-6xl inline-block '>
-              <a className='hover:text-green-soma'
-                href='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
-                target='_blank'
-                title='LinkedIn Profile'
-              >
-                <FiLinkedin/>
-              </a>
-              <a className='hover:text-green-soma'
-                href='https://www.instagram.com/somasys_sistemas/'
-                target='_blank'
-                title='LinkedIn Profile'
-              >
-                <FiInstagram/>
-              </a>
-              <a className='hover:text-green-soma'
-                href='https://www.facebook.com/somasysPF/'
-                target='_blank'
-                title='LinkedIn Profile'
-              >
-                <FiFacebook/>
-              </a>
-            </div>
-          </div>
+          <Info />
+          <SocialMedia />
+
         </div>
       </div>
 
@@ -105,5 +32,71 @@ const Footer = () => {
     </div>
   );
 };
+
+const Info = () => {
+  return (
+    <div className='lg:w-1/4 md:w-1/2 w-full px-4 text-center'>
+      <h2 className='title-font font-medium text-white tracking-widest text-lg mb-3'>
+        ENDEREÇO
+      </h2>
+      <nav className='list-none mb-10'>
+        <li>
+          <a className='text-white'>Rua Alfredo Chaves, 568</a>
+        </li>
+        <li>
+          <a className='text-white'>Bairro Lucas Araújo - Passo Fundo/RS</a>
+        </li>
+        <li>
+          <a className='text-white'>54 3311.1388 - Comercial</a>
+        </li>
+        <li>
+          <a className='text-white'>54 9 9940.1388 - Administrativo</a>
+        </li>
+        <li>
+          <a className='text-white'>comercial@somasys.com.br</a>
+        </li>
+      </nav>
+    </div>
+  );
+};
+
+const SocialMedia = () => {
+  return (
+    <div className='lg:w-1/4 md:w-1/2 w-full flex flex-col items-center'>
+      <h2 className='title-font text-center font-medium text-white tracking-widest text-lg mb-3'>
+        SIGA-NOS EM NOSSAS
+      </h2>
+      <h2 className='title-font text-center font-medium text-white tracking-widest text-lg '>
+        REDES SOCIAIS:
+      </h2>
+      <div className='ml-6 flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-6xl inline-block '>
+        <a className='hover:text-green-soma'
+          href='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
+          target='_blank'
+          title='LinkedIn Profile'
+        >
+          <FiLinkedin />
+        </a>
+        <a className='hover:text-green-soma'
+          href='https://www.instagram.com/somasys_sistemas/'
+          target='_blank'
+          title='LinkedIn Profile'
+        >
+          <FiInstagram />
+        </a>
+        <a className='hover:text-green-soma'
+          href='https://www.facebook.com/somasysPF/'
+          target='_blank'
+          title='LinkedIn Profile'
+        >
+          <FiFacebook />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+Footer.Info = Info;
+Footer.SocialMedia = SocialMedia;
 
 export default Footer;

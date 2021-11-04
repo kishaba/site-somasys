@@ -14,7 +14,6 @@
 
 .flip-card-front,
 .flip-card-back {
-  -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
 
@@ -55,7 +54,6 @@
   width: 20px;
   border-radius: 50%;
 
-  cursor: pointer;
   margin: 15px 7px 0px;
 
   background-color: #c4c4c4;
