@@ -32,14 +32,14 @@ import { useEffect, useRef } from 'react';
 //   );
 // };
 
-const Hero = () => {
-  const videoRef = useRef();
+const Hero = ({videoRef}) => {
+  // const videoRef = useRef();
 
-  useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.play();
-    }, 0);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     videoRef.current.play();
+  //   }, 0);
+  // }, []);
 
   return (
 
@@ -48,13 +48,9 @@ const Hero = () => {
         bg-gradient-to-l from-green-soma to-blue-soma '
       >
         <div className='flex '>
-          <video ref={videoRef} loop muted>
+          <video loop muted autoPlay>
             <source src='/videos/cidade.mp4' type='video/mp4' />
           </video>
-           {/* <img
-            alt='heroa'
-            src='solucao.jpg'
-          /> */}
         </div>
         <div className='absolute'>
           <img
@@ -67,5 +63,22 @@ const Hero = () => {
     </div>
   );
 };
+
+
+// export async function getStaticProps() {
+//   const videoRef = useRef();
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       videoRef.current.play();
+//     }, 0);
+//   }, []);
+
+//   return {
+//     props: {
+//       videoRef,
+//     },
+//   }
+// }
 
 export default Hero;
