@@ -47,8 +47,14 @@ const Hero = ({videoRef}) => {
         className='flex justify-center items-center
         bg-gradient-to-l from-green-soma to-blue-soma '
       >
-        <div className='flex '>
-          <video loop muted autoPlay>
+      <div className='flex '>
+          <img
+            className='object-cover w-screen'
+            alt='hero'
+            src='fundo_estatico.jpg'
+          />
+          <video loop muted autoPlay className='absolute
+          '>
             <source src='/videos/cidade.mp4' type='video/mp4' />
           </video>
         </div>
