@@ -67,9 +67,7 @@ const Services = () => {
         </h1>
 
         <p className="lg:w-2/3 mx-auto leading-relaxed text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Oferecemos uma gama de serviços completos para atender a sua empresa, conforme a necessidade.
         </p>
       </div>
 
