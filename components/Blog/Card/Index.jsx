@@ -8,13 +8,13 @@ const Card = ({ categoria = '', title = '', resumo = '', postId = '', data = '' 
           <span className='font-semibold title-font text-gray-700'>{categoria}</span>
           <span className='mt-1 text-gray-500 text-sm'>{data}</span>
         </div>
-        <div className='md:flex-grow'>
-          <h2 className='text-2xl font-medium text-gray-900 title-font mb-2'>
+        <div className='lg:flex-grow'>
+          <h2 className='ml-3 lg:ml-0 text-lg lg:text-2xl font-medium text-gray-900 title-font mb-2'>
             {title}
           </h2>
-          <p className='leading-relaxed'>{resumo}</p>
+          <p className='ml-3 lg:ml-0 leading-relaxed'>{resumo}</p>
           <Link href={`/blog/${postId}/post`}>
-            <a className='text-blue-soma inline-flex items-center hover:cursor-pointer py-3'>
+            <a className='text-blue-soma inline-flex items-center hover:cursor-pointer py-3 ml-3 lg:ml-0'>
               Learn More
               <svg
                 className='w-4 h-4 ml-2'
