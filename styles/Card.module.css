@@ -1,0 +1,22 @@
+.card {
+    width: 320px;
+    height: 350px;
+}
+
+.inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotatey(180deg);
+}

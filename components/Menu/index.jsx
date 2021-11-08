@@ -34,7 +34,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className='fixed w-full z-50'>
+      <div className='fixed w-full z-50 hidden md:block'>
         <div className={colorChange ? 'text-white' : 'text-white'}>
           <div className={navbar ? 'bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl' : ''}>
             <div className='container px-5 py-3 mx-auto flex p-5 items-center md:flex-row'>
@@ -51,7 +51,7 @@ const Menu = () => {
 const MenuBrand = () => {
   return (
     <div className='flex-1'>
-      <img className='object-contain h-14 hidden md:block' alt='logo' src='logo.png' />
+      <img className='object-contain h-14' alt='logo' src='logo.png' />
     </div>
   );
 };
@@ -59,7 +59,7 @@ const MenuBrand = () => {
 const MenuNav = () => {
   return (
 
-    <div className='flex space-x-4 hidden md:block md:ml-auto items-center text-xl'>
+    <div className='flex space-x-4 md:ml-auto items-center text-xl'>
 
       <Link to="home" smooth={true}>
         <MenuItem>Home</MenuItem>

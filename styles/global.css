@@ -1,26 +1,24 @@
-.flip-card {
+.card {
   width: 320px;
   height: 350px;
 }
 
-.flip-card-inner {
+.inner {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.card:hover .inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front,
-.flip-card-back {
-  backface-visibility: hidden;
+.front {
+  /* backface-visibility: hidden; */
 }
 
-.flip-card-back {
-  transform: rotatey(180deg);
+.back {
+  /* transform: rotateY(180deg); */
 }
-
 
 
 
