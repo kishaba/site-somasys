@@ -123,16 +123,14 @@ const Clients = () => {
     }, [index]);
 
     return (
-        <div className="text-gray-600 body-font">
+        <div className="text-gray-600 body-font my-6">
             <div className="container px-5 pt-24 mx-auto text-center">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">
                     PARCEIROS
                 </h1>
 
-                <p className="lg:w-2/3 mx-auto leading-relaxed text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                <p className="lg:w-2/3 mx-auto leading-relaxed text mb-3">
+                     Algumas das empresas que confiam na Somasys.
                 </p>
             </div>
             
