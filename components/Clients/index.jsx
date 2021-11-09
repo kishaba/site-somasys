@@ -24,14 +24,8 @@ const Clients = () => {
                     src: 'marin.png',
                     alt: 'Supermercado Marin'
                 }
-            },            
-            {
-                color: "#483D8B",
-                image: {
-                    src: 'wagner.jpg',
-                    alt: 'Supermercado Wagner'
-                }
-            },            
+            }            
+           
         ],
         [
             {
@@ -54,22 +48,15 @@ const Clients = () => {
                     src: 'bertuol.jpg',
                     alt: 'Supermercado Bertuol'
                 }
-            },
-            {
-                color: "#FFBB28",
-                image: {
-                    src: 'oniric.png',
-                    alt: 'Supermercado Oniric'
-                }
-            },
+            }
         ],
         [
             
             {
-                color: "#0088FE",
+                color: "#483D8B",
                 image: {
-                    src: 'prosom.png',
-                    alt: 'Prosom'
+                    src: 'wagner.jpg',
+                    alt: 'Supermercado Wagner'
                 }
             },            
                       
@@ -88,13 +75,12 @@ const Clients = () => {
                 }
             },
             {
-                color: "#483D8B",
-                title: "Serviços Oferecidos",
+                color: "#00C49F",
                 image: {
-                    src: 'servico.jpg',
-                    alt: 'Serviços Oferecidos'
-                }
-            },  
+                    src: 'milenium.png',
+                    alt: 'Supermercado Milenium'
+                },
+            }
         ]
     ]
 
@@ -137,7 +123,7 @@ const Clients = () => {
 
             <div className="slideshow">
                 <div
-                    className="slideshowSlider"
+                    className="slideshowSlider "
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                 >
                     {clientes.map(cliente =>
@@ -145,13 +131,13 @@ const Clients = () => {
                         cliente.map((children,index) => (
 
                             <div
-                                className="slide mx-2 inline-block w-full"
+                                className="w-28 h-32 md:w-96 md:h-96 mx-2 inline-block "
                                 key={index}
                                 style={{ backgroundColor: children.color }}
                             >
                                 <img
                                     alt={children.image.alt}
-                                    className="object-fill h-full object-center block"
+                                    className="object-fill h-full w-full object-center block"
                                     src={children.image.src}
                                 />
                             </div>

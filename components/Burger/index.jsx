@@ -8,7 +8,7 @@ const Burger = () => {
 
   return (
     <div>
-      <div className='flex justify-end md:hidden z-50 absolute inset-y-0 right-0'>
+      <div className='flex justify-end lg:hidden z-50 absolute inset-y-0 right-0'>
         <BurguerButton onClick={OpenCloseMenu}>
           <span className='sr-only'>Open main menu</span>
           <BurguerSvG isOpen={isOpen} />

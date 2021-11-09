@@ -38,7 +38,7 @@ function Menu() {
       <nav className='fixed w-full z-50 text-white'>
         <div className='fixed w-full z-50'>
           <div
-            className={colorChange ? 'text-white  hidden md:block' : 'text-white  hidden md:block'}
+            className={colorChange ? 'text-white  hidden lg:block' : 'text-white  hidden lg:block'}
           >
             <div
               className={navbar ? 'bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl' : ''}

@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "moment": "^2.29.1",
     "next": "latest",
     "next-slicezone": "^0.1.2",
