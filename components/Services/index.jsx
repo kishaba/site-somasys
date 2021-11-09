@@ -8,7 +8,7 @@ const Services = () => {
       alt: 'Gestão Empresarial'
     },
     style: {
-      background: "url('gestao_espelhada.jpg')",
+      backgroundImage: "url('gestao_espelhada.jpg')",
       backgroundSize: 'contain',
     },
     lista: [
@@ -27,7 +27,7 @@ const Services = () => {
       alt: 'Soluções Comerciais'
     },
     style: {
-      background: "url('solucao_espelhada.jpg')",
+      backgroundImage: "url('solucao_espelhada.jpg')",
       backgroundSize: 'contain',
     },
     lista: [
@@ -46,7 +46,7 @@ const Services = () => {
       alt: 'Serviços Oferecidos'
     },
     style: {
-      background: "url('servico_espelhada.jpg')",
+      backgroundImage: "url('servico_espelhada.jpg')",
       backgroundSize: 'contain',
     },
     lista: [
@@ -60,7 +60,7 @@ const Services = () => {
 
 
   return (
-    <div className='text-gray-600 body-font bg-gradient-to-r from-green-soma to-blue-soma items-center'>
+    <div className='text-gray-600 body-font bg-teste items-center'>
       <div className="container px-5 pt-24 mx-auto text-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
           ALGUNS DE NOSSOS SERVIÇOS

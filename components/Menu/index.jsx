@@ -87,7 +87,7 @@ const MenuItem = ({ children }) => {
 const MenuBrand = () => {
   return (
     <div className='flex-1'>
-      <img className='object-contain h-14 hidden md:block' alt='logo' src='logo.png' />
+      <img className='object-contain h-14' alt='logo' src='logo.png' />
     </div>
   );
 };

@@ -10,6 +10,7 @@ module.exports = {
         'white-blue-soma': '#6DB1B9',
         'card-front': '#4A8385',
         'card-back': '#252725',
+        'teste': '#328381'
       },
     },
   },

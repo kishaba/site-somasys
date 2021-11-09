@@ -5,7 +5,6 @@ import Clients from '../Clients';
 import Footer from '../Footer';
 import Services from '../Services';
 import Contact from '../Contact';
-import Numbers from '../Numbers';
 
 const Layout = () => {
   return (
@@ -28,13 +27,11 @@ const Layout = () => {
         <Clients />
       </div>
 
-      <Numbers />
-
       <div id="contact">
         <Contact />
       </div>
 
-      
+
       <Footer />
     </>
   );
