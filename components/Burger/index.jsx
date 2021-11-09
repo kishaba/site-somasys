@@ -15,7 +15,7 @@ const Burger = () => {
         </BurguerButton>
       </div>
       <BurguerNav isOpen={isOpen}>
-        <div className='md:hidden' id='mobile-menu'>
+        <div className='lg:hidden' id='mobile-menu'>
           <BuguerLink onClick={OpenCloseMenu}/>
         </div>
       </BurguerNav>
@@ -126,7 +126,7 @@ const BurguerNav = ({ children, isOpen }) => {
       leaveFrom='opacity-100 scale-100'
       leaveTo='opacity-0 scale-95'
     >
-      <div className='md:hidden' id='mobile-menu'>
+      <div className='lg:hidden' id='mobile-menu'>
         <div className='flex flex-col px-12 pt-6 h-96 absolute inset-x-0 top-0 z-30 space-y-6  bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl text-2xl '>
           {children}
         </div>
