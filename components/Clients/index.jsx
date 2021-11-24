@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { useEffect, useRef, useState } from "react";
-
 
 const Clients = () => {
     const clientes = [
@@ -19,19 +19,19 @@ const Clients = () => {
                 },
             },
             {
-                color: "#0088FE",                
+                color: "#0088FE",
                 image: {
                     src: 'marin.png',
                     alt: 'Supermercado Marin'
                 }
-            },            
+            },
             {
                 color: "#483D8B",
                 image: {
                     src: 'wagner.jpg',
                     alt: 'Supermercado Wagner'
                 }
-            },            
+            },
         ],
         [
             {
@@ -64,15 +64,15 @@ const Clients = () => {
             },
         ],
         [
-            
+
             {
                 color: "#0088FE",
                 image: {
                     src: 'prosom.png',
                     alt: 'Prosom'
                 }
-            },            
-                      
+            },
+
             {
                 color: "#00C49F",
                 image: {
@@ -94,7 +94,7 @@ const Clients = () => {
                     src: 'servico.jpg',
                     alt: 'Serviços Oferecidos'
                 }
-            },  
+            },
         ]
     ]
 
@@ -130,10 +130,10 @@ const Clients = () => {
                 </h1>
 
                 <p className="lg:w-2/3 mx-auto leading-relaxed text mb-3">
-                     Algumas das empresas que confiam na Somasys.
+                    Algumas das empresas que confiam na Somasys.
                 </p>
             </div>
-            
+
 
             <div className="slideshow">
                 <div
@@ -142,17 +142,20 @@ const Clients = () => {
                 >
                     {clientes.map(cliente =>
 
-                        cliente.map((children,index) => (
+                        cliente.map((children, index) => (
 
                             <div
                                 className="slide mx-2 inline-block w-full"
                                 key={index}
                                 style={{ backgroundColor: children.color }}
                             >
-                                <img
-                                    alt={children.image.alt}
-                                    className="object-fill h-full object-center block"
+                                <Image
+                                    unoptimized={true}
                                     src={children.image.src}
+                                    alt={children.image.alt}
+                                    width="100%"
+                                    height="100%"
+                                    layout="responsive"
                                 />
                             </div>
 
