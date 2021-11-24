@@ -38,7 +38,7 @@ const Card = ({ rotation = 180, timing = 8000, children }) => {
     return (
         <div className='flex-grow flex md:text-left text-center'>
             <div className='card mb-8 mx-auto overflow-hidden rounded-lg'>
-                <div className='inner h-full text-center hidden md:block'
+                <div className='inner h-full text-center hidden lg:block'
                     onMouseEnter={trigger}
                     style={inner}>
 

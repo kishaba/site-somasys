@@ -72,7 +72,7 @@ const Services = () => {
       </div>
 
 
-      <div className='container px-5 py-8 mx-auto flex md:items-center md:flex-row flex-col'>
+      <div className='container px-5 py-8 mx-auto flex md:items-center lg:flex-row flex-col'>
         <Card>{gestao}</Card>
         <Card>{solucoes}</Card>
         <Card>{servicos}</Card>

@@ -24,6 +24,7 @@ const Clients = () => {
                     src: 'marin.png',
                     alt: 'Supermercado Marin'
                 }
+<<<<<<< HEAD
             },
             {
                 color: "#483D8B",
@@ -32,6 +33,10 @@ const Clients = () => {
                     alt: 'Supermercado Wagner'
                 }
             },
+=======
+            }            
+           
+>>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
         ],
         [
             {
@@ -54,22 +59,15 @@ const Clients = () => {
                     src: 'bertuol.jpg',
                     alt: 'Supermercado Bertuol'
                 }
-            },
-            {
-                color: "#FFBB28",
-                image: {
-                    src: 'oniric.png',
-                    alt: 'Supermercado Oniric'
-                }
-            },
+            }
         ],
         [
 
             {
-                color: "#0088FE",
+                color: "#483D8B",
                 image: {
-                    src: 'prosom.png',
-                    alt: 'Prosom'
+                    src: 'wagner.jpg',
+                    alt: 'Supermercado Wagner'
                 }
             },
 
@@ -88,13 +86,19 @@ const Clients = () => {
                 }
             },
             {
-                color: "#483D8B",
-                title: "Serviços Oferecidos",
+                color: "#00C49F",
                 image: {
+<<<<<<< HEAD
                     src: 'servico.jpg',
                     alt: 'Serviços Oferecidos'
                 }
             },
+=======
+                    src: 'milenium.png',
+                    alt: 'Supermercado Milenium'
+                },
+            }
+>>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
         ]
     ]
 
@@ -137,7 +141,7 @@ const Clients = () => {
 
             <div className="slideshow">
                 <div
-                    className="slideshowSlider"
+                    className="slideshowSlider "
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                 >
                     {clientes.map(cliente =>
@@ -145,12 +149,18 @@ const Clients = () => {
                         cliente.map((children, index) => (
 
                             <div
-                                className="slide mx-2 inline-block w-full"
+                                className="w-28 h-32 md:w-96 md:h-96 mx-2 inline-block "
                                 key={index}
                                 style={{ backgroundColor: children.color }}
                             >
+<<<<<<< HEAD
                                 <Image
                                     unoptimized={true}
+=======
+                                <img
+                                    alt={children.image.alt}
+                                    className="object-fill h-full w-full object-center block"
+>>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
                                     src={children.image.src}
                                     alt={children.image.alt}
                                     width="100%"
