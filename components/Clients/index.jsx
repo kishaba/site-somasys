@@ -24,19 +24,8 @@ const Clients = () => {
                     src: 'marin.png',
                     alt: 'Supermercado Marin'
                 }
-<<<<<<< HEAD
-            },
-            {
-                color: "#483D8B",
-                image: {
-                    src: 'wagner.jpg',
-                    alt: 'Supermercado Wagner'
-                }
-            },
-=======
             }            
            
->>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
         ],
         [
             {
@@ -88,17 +77,10 @@ const Clients = () => {
             {
                 color: "#00C49F",
                 image: {
-<<<<<<< HEAD
-                    src: 'servico.jpg',
-                    alt: 'Serviços Oferecidos'
-                }
-            },
-=======
                     src: 'milenium.png',
                     alt: 'Supermercado Milenium'
                 },
             }
->>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
         ]
     ]
 
@@ -153,14 +135,8 @@ const Clients = () => {
                                 key={index}
                                 style={{ backgroundColor: children.color }}
                             >
-<<<<<<< HEAD
                                 <Image
                                     unoptimized={true}
-=======
-                                <img
-                                    alt={children.image.alt}
-                                    className="object-fill h-full w-full object-center block"
->>>>>>> c3eb43c9d3cac608d6f18b40c0b996697c0f13aa
                                     src={children.image.src}
                                     alt={children.image.alt}
                                     width="100%"
