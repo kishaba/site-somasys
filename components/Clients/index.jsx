@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const Clients = () => {
     const clientes = [
@@ -85,29 +85,6 @@ const Clients = () => {
     ]
 
     const [index, setIndex] = useState(0);
-    const timeoutRef = useRef(null);
-
-    function resetTimeout() {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-    }
-
-    useEffect(() => {
-        resetTimeout();
-        timeoutRef.current = setTimeout(
-            () =>
-                setIndex((prevIndex) =>
-                    prevIndex === clientes.length - 1 ? 0 : prevIndex + 1
-                ),
-            25000
-        );
-
-        return () => {
-            resetTimeout();
-        };
-    }, [index]);
-
     return (
         <div className="text-gray-600 body-font my-6">
             <div className="container px-5 pt-24 mx-auto text-center">

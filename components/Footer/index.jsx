@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FiLinkedin, FiInstagram, FiFacebook } from 'react-icons/fi';
 
 const Footer = () => {
@@ -8,10 +9,13 @@ const Footer = () => {
           <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
             <div className='mx-auto flex px-5 md:flex-row flex-col items-center'>
               <div className=' lg:max-w-lg lg:w-full md:w-1/2 w-5/6 pb-3'>
-                <img
-                  className='object-cover object-center rounded'
-                  alt='hero'
-                  src='logo-branco-assessoria.png'
+                <Image
+                  unoptimized={true}
+                  src="logo-branco-assessoria.png"
+                  alt="Logo Somasys"
+                  width="90"
+                  height="70"
+                  layout="responsive"
                 />
               </div>
             </div>
@@ -69,9 +73,10 @@ const SocialMedia = () => {
       <h2 className='title-font text-center font-medium text-white tracking-widest text-lg '>
         REDES SOCIAIS:
       </h2>
-      <div className='ml-6 flex space-x-4 py-6 flex flex-wrap content-center text-2xl text-white md:text-5xl inline-block '>
+      <div className='ml-6 flex space-x-4 py-6 flex-wrap content-center text-2xl text-white md:text-5xl'>
         <a className='hover:text-green-soma'
           href='https://www.linkedin.com/company/somasysassessoriaesistemas/about/'
+          rel="noopener noreferrer"
           target='_blank'
           title='LinkedIn Profile'
         >
@@ -79,6 +84,7 @@ const SocialMedia = () => {
         </a>
         <a className='hover:text-green-soma'
           href='https://www.instagram.com/somasys_sistemas/'
+          rel="noopener noreferrer"
           target='_blank'
           title='LinkedIn Profile'
         >
@@ -86,6 +92,7 @@ const SocialMedia = () => {
         </a>
         <a className='hover:text-green-soma'
           href='https://www.facebook.com/somasysPF/'
+          rel="noopener noreferrer"
           target='_blank'
           title='LinkedIn Profile'
         >

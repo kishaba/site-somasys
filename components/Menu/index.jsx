@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Transition } from '@headlessui/react';
 import { Link } from 'react-scroll';
 import Burger from '../Burger';
 import Image from 'next/image';
 
 function Menu() {
-  const [isOpen, setIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const changeNavbar = () => {
     if (window.scrollY >= 66) {
@@ -93,7 +91,7 @@ const MenuBrand = () => {
           src="logo.png"
           alt="logo"
           width="100"
-          height="80"
+          height="70"
         />
     </div>
   );
@@ -121,7 +119,7 @@ const MenuNav = () => {
       <Link to='contact' smooth={true}>
         <MenuItem>Contato</MenuItem>
       </Link>
-
+      
       <a href='/blog'>
         <MenuItem>Blog</MenuItem>
       </a>

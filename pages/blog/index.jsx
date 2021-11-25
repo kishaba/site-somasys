@@ -1,6 +1,9 @@
 import Prismic from 'prismic-javascript';
 import Card from '../../components/Blog/Card/Index';
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import LogoSomasys from '../../public/logo.png';
 
 export async function getServerSideProps({ res }) {
   const client = await Prismic.client(process.env.PRISMIC_CLIENT);
@@ -88,16 +91,29 @@ const BlogHeader = () => {
   return (
     <div className='body-font'>
       <div className='relative top-0 pt-[17%] overflow-hidden'>
-        <img
-          className='absolute inset-0 object-cover object-top w-screen h-36 filter blur bg-gradient-to-r from-green-soma to-blue-soma'
-        />
+
+        <div className={`
+          absolute inset-0 object-cover object-top w-screen
+          h-36 filter blur bg-gradient-to-r from-green-soma to-blue-soma
+        `} />
+
+
       </div>
 
-      <div className='mt-[-10%] md:mt-[-5%] lg:mt-[-14%] w-36 lg:w-96 mx-auto '>
-        <div className='relative pt-[56.25%]  rounded-2xl'>
-          <a href='/'>
-            <img className='absolute inset-0 object-contain' src='../../logo.png' alt='foto' />
-          </a>
+      <div className='mt-[-10%] md:mt-[-5%] lg:mt-[-14%] w-36 lg:w-96 mx-auto'>
+        <div className='relative pt-[56.25%] rounded-2xl'>
+          <div className="absolute inset-0">
+            <Link href="/" passHref>
+              <Image
+                unoptimized={true}
+                src={LogoSomasys}
+                alt="Somasys Logo"
+                sizes="100%"
+                layout="fill"
+                objectFit="contain"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

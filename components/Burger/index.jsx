@@ -1,10 +1,43 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import { Link } from 'react-scroll';
 
 const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const OpenCloseMenu = () => setIsOpen(!isOpen);
+
+
+  // --------------------------------------------
+  // const [navbar, setNavbar] = useState(false);
+  // const changeNavbar = () => {
+  //   if (window.scrollY >= 66) {
+  //     setNavbar(true);
+  //   } else {
+  //     setNavbar(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   changeNavbar();
+
+  //   window.addEventListener('scroll', changeNavbar);
+  // });
+
+  // const [colorChange, setColorchange] = useState(false);
+  // const changeBackground = () => {
+  //   if (window.scrollY >= 600) {
+  //     setColorchange(true);
+  //   } else {
+  //     setColorchange(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   changeBackground();
+
+  //   window.addEventListener('scroll', changeBackground);
+  // });
+  // --------------------------------------------
+
+
 
   return (
     <div>
@@ -16,7 +49,7 @@ const Burger = () => {
       </div>
       <BurguerNav isOpen={isOpen}>
         <div className='lg:hidden' id='mobile-menu'>
-          <BuguerLink onClick={OpenCloseMenu}/>
+          <BuguerLink onClick={OpenCloseMenu} />
         </div>
       </BurguerNav>
     </div>
@@ -28,7 +61,10 @@ const BurguerButton = ({ children, onClick }) => {
     <button
       onClick={onClick}
       type='button'
-      className='inline-flex items-center justify-center p-2 h-12 w-12 rounded-md text-white  hover:text-white   shadow-xl rounded-xl bg-gradient-to-b from-blue-soma backdrop-blur'
+      className={`
+        inline-flex justify-center items-center
+        bg-blue-soma  p-2 h-12 w-12
+      `}
       aria-controls='mobile-menu'
       aria-expanded='false'
     >
@@ -45,9 +81,12 @@ const BurguerItem = ({ children }) => {
   );
 };
 
-const BuguerLink = ({onClick}) => {
+const BuguerLink = ({ onClick }) => {
   return (
-    <div className='flex flex-col px-12 pt-6 h-96 absolute inset-x-0 top-0 z-30 space-y-6  bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl text-2xl '>
+    <div className={`
+      flex flex-col px-12 pt-6 h-96 absolute inset-x-0 top-0 z-30 space-y-6
+      bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl text-2xl
+    `}>
       <Link onClick={onClick} to='home' smooth={true}>
         <BurguerItem>Home</BurguerItem>
       </Link>

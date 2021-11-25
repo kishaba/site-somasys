@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useState } from "react"
 
 const Card = ({ rotation = 180, timing = 8000, children }) => {
@@ -44,10 +45,14 @@ const Card = ({ rotation = 180, timing = 8000, children }) => {
 
                     {/* FRENTE */}
                     <div className='front bg-card-front absolute w-full h-full'>
-                        <img className='object-cover'
+                        <Image
+                            unoptimized={true}
                             src={children.image.src}
                             alt={children.image.alt}
-                        />
+                            width="100%"
+                            height="100%"
+                            layout="responsive"
+                        />                 
                         <h1 className='text-white text-xl title-font font-medium mb-3'>
                             {children.title}
                         </h1>
