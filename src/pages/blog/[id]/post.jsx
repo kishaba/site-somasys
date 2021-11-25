@@ -1,4 +1,4 @@
-import LogoSomasys from '../../../public/logo.png';
+import LogoSomasys from '../../../../public/logo.png';
 import { RichText } from 'prismic-reactjs';
 import Prismic from 'prismic-javascript';
 import moment from 'moment';
@@ -41,7 +41,7 @@ function Post({ post, data }) {
       </div>
       <div className='mt-[-10%] md:mt-[-5%] lg:mt-[-14%] w-36 lg:w-96 mx-auto'>
         <div className='relative pt-[56.25%]  rounded-2xl'>
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 cursor-pointer">
             <Link href='/' passHref>
               <Image
                 unoptimized={true}

@@ -3,7 +3,7 @@ import Card from '../../components/Blog/Card/Index';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoSomasys from '../../public/logo.png';
+import LogoSomasys from '../../../public/logo.png';
 
 export async function getServerSideProps({ res }) {
   const client = await Prismic.client(process.env.PRISMIC_CLIENT);
@@ -102,7 +102,7 @@ const BlogHeader = () => {
 
       <div className='mt-[-10%] md:mt-[-5%] lg:mt-[-14%] w-36 lg:w-96 mx-auto'>
         <div className='relative pt-[56.25%] rounded-2xl'>
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 cursor-pointer">
             <Link href="/" passHref>
               <Image
                 unoptimized={true}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FiLinkedin, FiInstagram, FiFacebook } from 'react-icons/fi';
+import FooterLogo from '../../../public/logo-branco-assessoria.png'
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
               <div className=' lg:max-w-lg lg:w-full md:w-1/2 w-5/6 pb-3'>
                 <Image
                   unoptimized={true}
-                  src="logo-branco-assessoria.png"
+                  src={FooterLogo}
                   alt="Logo Somasys"
                   width="90"
                   height="70"

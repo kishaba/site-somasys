@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Logo from '../../public/fundo_estatico.jpg'
+import Logo from '../../../public/fundo_estatico.jpg'
 
 const Hero = () => {
   return (
@@ -7,15 +7,19 @@ const Hero = () => {
       className='flex justify-center items-center
         bg-gradient-to-l from-green-soma to-blue-soma'
     >
-      <div className='flex w-screen'>
-        <Image
+      <div className='flex'>
+        {/* <Image
           w="full"
           h="auto"
-          maxH="300px"
-          objectFit="cover"
           src={Logo}
           alt="Imagem estatica"
           loading="lazy"
+          objectFit="cover"
+        /> */}
+        <img
+          className='object-cover w-screen'
+          alt='hero'
+          src='fundo_estatico.jpg'
         />
 
         <video
