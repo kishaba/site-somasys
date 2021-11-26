@@ -1,9 +1,7 @@
 import Prismic from 'prismic-javascript';
 import Card from '../../components/Blog/Card/Index';
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import LogoSomasys from '../../../public/logo.png';
+import BlogHeader from '../../components/Blog/Header';
 
 export async function getServerSideProps({ res }) {
   const client = await Prismic.client(process.env.PRISMIC_CLIENT);
@@ -34,20 +32,24 @@ const Blog = (props) => {
     <>
       <BlogHeader />
 
-      <div className='container mx-auto'>
-        <div className='px-8 py-8'>
-          <input
-            className='shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline'
-            id='pesquisa'
-            type='text'
-            placeholder='Pesquisa'
-            onChange={(e) => searchItems(e.target.value)}
-          />
-        </div>
-
+      <div className='flex flex-col justify-center items-center px-8 py-8'>
         <div className='px-8'>
+          <div className='w-full py-6'>
+            <input
+              className={`
+              shadow border rounded p-3 w-full text-gray-700              
+              focus:outline-none focus:shadow-outline 
+            `}
+              id='pesquisa'
+              type='text'
+              placeholder='Pesquisa'
+              onChange={(e) => searchItems(e.target.value)}
+            />
+          </div>
+
           <h1 className='font-bold text-3xl md:text-4xl py-3'>Atualizações</h1>
-          <p className='pb-6'>Versões disponibilizadas pelos sistemas Somasys </p>
+          <p className='pb-6'>Todas as útimas versões disponibilizadas dos sistemas Somasys, direto da equipe. </p>
+          <hr className="pt-4"/>
 
           <div className='divide-y-2'>
             {searchInput.length > 1
@@ -61,7 +63,7 @@ const Blog = (props) => {
                     postId={post.id}
                     data={post.data.release_date}
                   />
-                );
+                )
               })
               : props.posts.map((post) => {
                 return (
@@ -73,52 +75,16 @@ const Blog = (props) => {
                     postId={post.id}
                     data={post.data.release_date}
                   />
-                );
+                )
               })}
           </div>
 
         </div>
-
-
       </div>
-
       <BlogFooter />
     </>
-  );
-};
-
-const BlogHeader = () => {
-  return (
-    <div className='body-font'>
-      <div className='relative top-0 pt-[17%] overflow-hidden'>
-
-        <div className={`
-          absolute inset-0 object-cover object-top w-screen
-          h-36 filter blur bg-gradient-to-r from-green-soma to-blue-soma
-        `} />
-
-
-      </div>
-
-      <div className='mt-[-10%] md:mt-[-5%] lg:mt-[-14%] w-36 lg:w-96 mx-auto'>
-        <div className='relative pt-[56.25%] rounded-2xl'>
-          <div className="absolute inset-0 cursor-pointer">
-            <Link href="/" passHref>
-              <Image
-                unoptimized={true}
-                src={LogoSomasys}
-                alt="Somasys Logo"
-                sizes="100%"
-                layout="fill"
-                objectFit="contain"
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )
+}
 
 const BlogFooter = () => {
   return (
@@ -129,10 +95,9 @@ const BlogFooter = () => {
         <p className='text-sm text-white'>© {new Date().getFullYear()} Somasys</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-Blog.Header = BlogHeader
 Blog.Footer = BlogFooter
 
 export default Blog;

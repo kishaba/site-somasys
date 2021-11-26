@@ -28,15 +28,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='text-gray-600 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
-        <div className='px-5 mx-auto text-center'>
-          <p className='text-lg text-white'>Uma empresa que você pode confiar!</p>
-          <p className='text-sm text-white'>© {new Date().getFullYear()} Somasys</p>
-        </div>
-      </div>
+      <Simple />
     </div>
-  );
-};
+  )
+}
 
 const Info = () => {
   return (
@@ -62,8 +57,8 @@ const Info = () => {
         </li>
       </nav>
     </div>
-  );
-};
+  )
+}
 
 const SocialMedia = () => {
   return (
@@ -101,10 +96,24 @@ const SocialMedia = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
+
+const Simple = () => {
+  return (
+    <div className='text-gray-600 body-font bg-gradient-to-l from-green-soma to-blue-soma'>
+      <div className='px-5 mx-auto text-center'>
+        <p className='text-lg text-white'>Uma empresa que você pode confiar!</p>
+        <p className='text-sm text-white'>© {new Date().getFullYear()} Somasys</p>
+      </div>
+    </div>
+  )
+}
+
+
 
 Footer.Info = Info;
+Footer.Simple = Simple;
 Footer.SocialMedia = SocialMedia;
 
 export default Footer;

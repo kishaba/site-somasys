@@ -53,18 +53,6 @@ const Clients = () => {
                         </div>
                     )}
                 </div>
-{/* 
-                <div className="slideshowDots cursor-pointer">
-                    {clientes.map((_, idx) => (
-                        <div
-                            key={idx}
-                            className={`slideshowDot${index === idx ? " active" : ""}`}
-                            onClick={() => {
-                                setIndex(idx);
-                            }}
-                        ></div>
-                    ))}
-                </div> */}
             </div>
         </div>
     )
