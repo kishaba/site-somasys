@@ -1,43 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import { Link } from 'react-scroll';
+import { Link as ReactScroll } from 'react-scroll';
+import Link from 'next/link'
 
 const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const OpenCloseMenu = () => setIsOpen(!isOpen);
-
-
-  // --------------------------------------------
-  // const [navbar, setNavbar] = useState(false);
-  // const changeNavbar = () => {
-  //   if (window.scrollY >= 66) {
-  //     setNavbar(true);
-  //   } else {
-  //     setNavbar(false);
-  //   }
-  // };
-  // useEffect(() => {
-  //   changeNavbar();
-
-  //   window.addEventListener('scroll', changeNavbar);
-  // });
-
-  // const [colorChange, setColorchange] = useState(false);
-  // const changeBackground = () => {
-  //   if (window.scrollY >= 600) {
-  //     setColorchange(true);
-  //   } else {
-  //     setColorchange(false);
-  //   }
-  // };
-  // useEffect(() => {
-  //   changeBackground();
-
-  //   window.addEventListener('scroll', changeBackground);
-  // });
-  // --------------------------------------------
-
-
 
   return (
     <div>
@@ -87,29 +55,31 @@ const BuguerLink = ({ onClick }) => {
       flex flex-col px-12 pt-6 h-96 absolute inset-x-0 top-0 z-30 space-y-6
       bg-gradient-to-b from-blue-soma backdrop-blur shadow-xl text-2xl
     `}>
-      <Link onClick={onClick} to='home' smooth={true}>
+      <ReactScroll onClick={onClick} to='home' smooth={true}>
         <BurguerItem>Home</BurguerItem>
-      </Link>
+      </ReactScroll>
 
-      <Link onClick={onClick} to='about' smooth={true}>
+      <ReactScroll onClick={onClick} to='about' smooth={true}>
         <BurguerItem>Sobre</BurguerItem>
-      </Link>
+      </ReactScroll>
 
-      <Link onClick={onClick} to='services' smooth={true}>
+      <ReactScroll onClick={onClick} to='services' smooth={true}>
         <BurguerItem> Serviços</BurguerItem>
-      </Link>
+      </ReactScroll>
 
-      <Link onClick={onClick} to='clients' smooth={true}>
+      <ReactScroll onClick={onClick} to='clients' smooth={true}>
         <BurguerItem>Parceiros</BurguerItem>
-      </Link>
+      </ReactScroll>
 
-      <Link onClick={onClick} to='contact' smooth={true}>
+      <ReactScroll onClick={onClick} to='contact' smooth={true}>
         <BurguerItem>Contato</BurguerItem>
-      </Link>
+      </ReactScroll>
 
-      <a href='/blog'>
-        <BurguerItem>Blog</BurguerItem>
-      </a>
+      <Link href='/blog'>
+        <a target='_blank'>
+          <BurguerItem>Blog</BurguerItem>
+        </a>
+      </Link>
     </div>
   );
 };
