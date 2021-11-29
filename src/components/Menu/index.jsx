@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as linkReact} from 'react-scroll';
 import Burger from '../Burger';
 import Image from 'next/image';
+import Link from 'next/link'
+
 
 function Menu() {
   const [navbar, setNavbar] = useState(false);
@@ -100,29 +102,31 @@ const MenuBrand = () => {
 const MenuNav = () => {
   return (
     <div className='space-x-4 hidden md:block md:ml-auto items-center text-xl'>
-      <Link to='home' smooth={true}>
+      <linkReact to='home' smooth={true}>
         <MenuItem>Home</MenuItem>
-      </Link>
+      </linkReact>
 
-      <Link to='about' smooth={true}>
+      <linkReact to='about' smooth={true}>
         <MenuItem>Sobre</MenuItem>
-      </Link>
+      </linkReact>
 
-      <Link to='services' smooth={true}>
+      <linkReact to='services' smooth={true}>
         <MenuItem>Serviços</MenuItem>
-      </Link>
+      </linkReact>
 
-      <Link to='clients' smooth={true}>
+      <linkReact to='clients' smooth={true}>
         <MenuItem>Parceiros</MenuItem>
-      </Link>
+      </linkReact>
 
-      <Link to='contact' smooth={true}>
+      <linkReact to='contact' smooth={true}>
         <MenuItem>Contato</MenuItem>
-      </Link>
+      </linkReact>
       
-      <a href='/blog'>
+      <Link href='/blog'>
+        <a  target="_blank">
         <MenuItem>Blog</MenuItem>
-      </a>
+        </a>
+      </Link>
     </div>
   );
 };
