@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link as linkReact} from 'react-scroll';
+import { Link as ReactScroll } from 'react-scroll';
 import Burger from '../Burger';
 import Image from 'next/image';
-import Link from 'next/link'
-
+import Link from 'next/link';
 
 function Menu() {
   const [navbar, setNavbar] = useState(false);
@@ -88,13 +87,7 @@ const MenuItem = ({ children }) => {
 const MenuBrand = () => {
   return (
     <div className='flex'>
-        <Image
-          unoptimized={true}
-          src="logo.png"
-          alt="logo"
-          width="100"
-          height="70"
-        />
+      <Image unoptimized={true} src='logo.png' alt='logo' width='100' height='70' />
     </div>
   );
 };
@@ -102,29 +95,29 @@ const MenuBrand = () => {
 const MenuNav = () => {
   return (
     <div className='space-x-4 hidden md:block md:ml-auto items-center text-xl'>
-      <linkReact to='home' smooth={true}>
+      <ReactScroll to='home' smooth={true}>
         <MenuItem>Home</MenuItem>
-      </linkReact>
+      </ReactScroll>
 
-      <linkReact to='about' smooth={true}>
+      <ReactScroll to='about' smooth={true}>
         <MenuItem>Sobre</MenuItem>
-      </linkReact>
+      </ReactScroll>
 
-      <linkReact to='services' smooth={true}>
+      <ReactScroll to='services' smooth={true}>
         <MenuItem>Serviços</MenuItem>
-      </linkReact>
+      </ReactScroll>
 
-      <linkReact to='clients' smooth={true}>
+      <ReactScroll to='clients' smooth={true}>
         <MenuItem>Parceiros</MenuItem>
-      </linkReact>
+      </ReactScroll>
 
-      <linkReact to='contact' smooth={true}>
+      <ReactScroll to='contact' smooth={true}>
         <MenuItem>Contato</MenuItem>
-      </linkReact>
-      
+      </ReactScroll>
+
       <Link href='/blog'>
-        <a  target="_blank">
-        <MenuItem>Blog</MenuItem>
+        <a target='_blank'>
+          <MenuItem>Blog</MenuItem>
         </a>
       </Link>
     </div>
